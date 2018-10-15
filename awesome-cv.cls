@@ -380,6 +380,7 @@
 % Others
 \newcommand{\acvSectionTopSkip}{3mm}
 \newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvItemTopSkip}{-4mm}
 
 
 %-------------------------------------------------------------------------------
@@ -634,7 +635,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{\acvItemTopSkip}
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
