@@ -189,55 +189,210 @@
 \newcommand*{\bodyfont}{\sourcesanspro}
 \newcommand*{\bodyfontlight}{\sourcesansprolight}
 
+% Font sizes
+% Fundamental structure
+\newlength{\@headerfirstnamesize}
+\setlength{\@headerfirstnamesize}{32pt}
+\newcommand*{\headerfirstnamesize}[1]{\setlength\@headerfirstnamesize{#1}}
+\newlength{\@headerlastnamesize}
+\setlength{\@headerlastnamesize}{32pt}
+\newcommand*{\headerlastnamesize}[1]{\setlength\@headerlastnamesize{#1}}
+\newlength{\@headerpositionsize}
+\setlength{\@headerpositionsize}{7.6pt}
+\newcommand*{\headerpositionsize}[1]{\setlength\@headerpositionsize{#1}}
+\newlength{\@headeraddresssize}
+\setlength{\@headeraddresssize}{8pt}
+\newcommand*{\headeraddresssize}[1]{\setlength\@headeraddresssize{#1}}
+\newlength{\@headersocialsize}
+\setlength{\@headersocialsize}{6.8pt}
+\newcommand*{\headersocialsize}[1]{\setlength\@headersocialsize{#1}}
+\newlength{\@headerquotesize}
+\setlength{\@headerquotesize}{9pt}
+\newcommand*{\headerquotesize}[1]{\setlength\@headerquotesize{#1}}
+\newlength{\@footersize}
+\setlength{\@footersize}{8pt}
+\newcommand*{\footersize}[1]{\setlength\@footersize{#1}}
+\newlength{\@sectionssize}
+\setlength{\@sectionssize}{16pt}
+\newcommand*{\sectionssize}[1]{\setlength\@sectionssize{#1}}
+\newlength{\@subsectionssize}
+\setlength{\@subsectionssize}{12pt}
+\newcommand*{\subsectionssize}[1]{\setlength\@subsectionssize{#1}}
+\newlength{\@paragraphsize}
+\setlength{\@paragraphsize}{9pt}
+\newcommand*{\paragraphsize}[1]{\setlength\@paragraphsize{#1}}
+
+% Entry elements
+\newlength{\@entrytitlesize}
+\setlength{\@entrytitlesize}{10pt}
+\newcommand*{\entrytitlesize}[1]{\setlength{\@entrytitlesize}{#1}}
+\newlength{\@entrypositionsize}
+\setlength{\@entrypositionsize}{8pt}
+\newcommand*{\entrypositionsize}[1]{\setlength\@entrypositionsize{#1}}
+\newlength{\@entrydatesize}
+\setlength{\@entrydatesize}{8pt}
+\newcommand*{\entrydatesize}[1]{\setlength\@entrydatesize{#1}}
+\newlength{\@entrylocationsize}
+\setlength{\@entrylocationsize}{9pt}
+\newcommand*{\entrylocationsize}[1]{\setlength\@entrylocationsize{#1}}
+\newlength{\@entrydescriptionsize}
+\setlength{\@entrydescriptionsize}{9pt}
+\newcommand*{\entrydescriptionsize}[1]{\setlength\@entrydescriptionsize{#1}}
+
+% Subentry elements
+\newlength{\@subentrytitlesize}
+\setlength{\@subentrytitlesize}{8pt}
+\newcommand*{\subentrytitlesize}[1]{\setlength\@subentrytitlesize{#1}}
+\newlength{\@subentrypositionsize}
+\setlength{\@subentrypositionsize}{7pt}
+\newcommand*{\subentrypositionsize}[1]{\setlength\@subentrypositionsize{#1}}
+\newlength{\@subentrydatesize}
+\setlength{\@subentrydatesize}{7pt}
+\newcommand*{\subentrydatesize}[1]{\setlength\@subentrydatesize{#1}}
+\newlength{\@subentrylocationsize}
+\setlength{\@subentrylocationsize}{7pt}
+\newcommand*{\subentrylocationsize}[1]{\setlength\@subentrylocationsize{#1}}
+\newlength{\@subentrydescriptionsize}
+\setlength{\@subentrydescriptionsize}{8pt}
+\newcommand*{\subentrydescriptionsize}[1]{\setlength\@subentrydescriptionsize{#1}}
+
+% Honor elements
+\newlength{\@honortitlesize}
+\setlength{\@honortitlesize}{9pt}
+\newcommand*{\honortitlesize}[1]{\setlength\@honortitlesize{#1}}
+\newlength{\@honorpositionsize}
+\setlength{\@honorpositionsize}{9pt}
+\newcommand*{\honorpositionsize}[1]{\setlength\@honorpositionsize{#1}}
+\newlength{\@honordatesize}
+\setlength{\@honordatesize}{9pt}
+\newcommand*{\honordatesize}[1]{\setlength\@honordatesize{#1}}
+\newlength{\@honorlocationsize}
+\setlength{\@honorlocationsize}{9pt}
+\newcommand*{\honorlocationsize}[1]{\setlength\@honorlocationsize{#1}}
+
+% Skills elements
+\newlength{\@skilltypesize}
+\setlength{\@skilltypesize}{10pt}
+\newcommand*{\skilltypesize}[1]{\setlength\@skilltypesize{#1}}
+\newlength{\@skillsize}
+\setlength{\@skillsize}{9pt}
+\newcommand*{\skillsize}[1]{\setlength\@skillsize{#1}}
+
+% Cover letter elements
+\newlength{\@lettersectionsize}
+\setlength{\@lettersectionsize}{14pt}
+\newcommand*{\lettersectionsize}[1]{\setlength{\@lettersectionsize}{#1}}
+\newlength{\@recipientaddresssize}
+\setlength{\@recipientaddresssize}{9pt}
+\newcommand*{\recipientaddresssize}[1]{\setlength\@recipientaddresssize{#1}}
+\newlength{\@recipienttitlesize}
+\setlength{\@recipienttitlesize}{11pt}
+\newcommand*{\recipienttitlesize}[1]{\setlength\@recipienttitlesize{#1}}
+\newlength{\@lettertitlesize}
+\setlength{\@lettertitlesize}{10pt}
+\newcommand*{\lettertitlesize}[1]{\setlength\@lettertitlesize{#1}}
+\newlength{\@letterdatesize}
+\setlength{\@letterdatesize}{9pt}
+\newcommand*{\letterdatesize}[1]{\setlength\@letterdatesize{#1}}
+\newlength{\@lettertextsize}
+\setlength{\@lettertextsize}{10pt}
+\newcommand*{\lettertextsize}[1]{\setlength\@lettertextsize{#1}}
+\newlength{\@letternamesize}
+\setlength{\@letternamesize}{10pt}
+\newcommand*{\letternamesize}[1]{\setlength\@letternamesize{#1}}
+\newlength{\@letterenclosuresize}
+\setlength{\@letterenclosuresize}{10pt}
+\newcommand*{\letterenclosuresize}[1]{\setlength\@letterenclosuresize{#1}}
+
+% Boolean value to switch color highlighting
+\newcommand*{\uniformfontsize}[1][9pt]{%
+    \setlength{\@paragraphsize}{#1}
+    \setlength{\@headerpositionsize}{\@paragraphsize}
+    \setlength{\@headeraddresssize}{\@paragraphsize-2pt}
+    \setlength{\@headersocialsize}{\@paragraphsize-2pt}
+    \setlength{\@headerquotesize}{\@paragraphsize}
+    \setlength{\@sectionssize}{\@paragraphsize+7pt}
+    \setlength{\@subsectionssize}{\@paragraphsize+3pt}
+    
+    \setlength{\@entrytitlesize}{\@paragraphsize+1pt}
+    \setlength{\@entrypositionsize}{\@paragraphsize}
+    \setlength{\@entrydatesize}{\@paragraphsize}
+    \setlength{\@entrylocationsize}{\@paragraphsize}
+    \setlength{\@entrydescriptionsize}{\@paragraphsize}
+    
+    \setlength{\@subentrytitlesize}{\@paragraphsize}
+    \setlength{\@subentrypositionsize}{\@paragraphsize}
+    \setlength{\@subentrydatesize}{\@paragraphsize}
+    \setlength{\@subentrylocationsize}{\@paragraphsize}
+    \setlength{\@subentrydescriptionsize}{\@paragraphsize}
+    
+    \setlength{\@honortitlesize}{\@paragraphsize}
+    \setlength{\@honorpositionsize}{\@paragraphsize}
+    \setlength{\@honordatesize}{\@paragraphsize}
+    \setlength{\@honorlocationsize}{\@paragraphsize}
+    
+    \setlength{\@skilltypesize}{\@paragraphsize}
+    \setlength{\@skillsize}{\@paragraphsize}
+    
+    \setlength{\@lettersectionsize}{\@paragraphsize+4pt}
+    \setlength{\@recipientaddresssize}{\@paragraphsize}
+    \setlength{\@recipienttitlesize}{\@paragraphsize+1pt}
+    \setlength{\@lettertitlesize}{\@paragraphsize+1pt}
+    \setlength{\@letterdatesize}{\@paragraphsize}
+    \setlength{\@lettertextsize}{\@paragraphsize}
+    \setlength{\@letternamesize}{\@paragraphsize}
+    \setlength{\@letterenclosuresize}{\@paragraphsize}
+}
+
 %-------------------------------------------------------------------------------
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\@highlightcolor{#1}}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
-\newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{\@headerfirstnamesize}{1em}\headerfontlight\color{graytext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{\@headerlastnamesize}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{\@headerpositionsize}{1em}\bodyfont\scshape\@highlightcolor{#1}}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{\@headeraddresssize}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{\@headersocialsize}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerquotestyle}[1]{{\fontsize{\@headerquotesize}{1em}\bodyfont\itshape\color{darktext} #1}}
+\newcommand*{\footerstyle}[1]{{\fontsize{\@footersize}{1em}\footerfont\scshape\color{lighttext} #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{\@sectionssize}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{\@subsectionssize}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\paragraphstyle}{\fontsize{\@paragraphsize}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\@highlightcolor{#1}}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{\@entrytitlesize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{\@entrypositionsize}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{\@entrydatesize}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{\@entrylocationsize}{1em}\bodyfontlight\slshape\@highlightcolor{#1}}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{\@entrydescriptionsize}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
-\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
-\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\@highlightcolor{#1}}}
-\newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\subentrytitlestyle}[1]{{\fontsize{\@subentrytitlesize}{1em}\bodyfont\mdseries\color{graytext} #1}}
+\newcommand*{\subentrypositionstyle}[1]{{\fontsize{\@subentrypositionsize}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\subentrydatestyle}[1]{{\fontsize{\@subentrydatesize}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\subentrylocationstyle}[1]{{\fontsize{\@subentrylocationsize}{1em}\bodyfontlight\slshape\@highlightcolor{#1}}}
+\newcommand*{\subdescriptionstyle}[1]{{\fontsize{\@subentrydescriptionsize}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\@highlightcolor{#1}}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{\@honortitlesize}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{\@honorpositionsize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{\@honordatesize}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{\@honorlocationsize}{1em}\bodyfontlight\slshape\@highlightcolor{#1}}}
 
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{\@skilltypesize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{\@skillsize}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
-\newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
-\newcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfontlight\upshape\color{graytext}}
-\newcommand*{\letternamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
+\newcommand*{\lettersectionstyle}[1]{{\fontsize{\@lettersectionsize}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\recipientaddressstyle}[1]{{\fontsize{\@recipientaddresssize}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\recipienttitlestyle}[1]{{\fontsize{\@recipienttitlesize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\lettertitlestyle}[1]{{\fontsize{\@lettertitlesize}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
+\newcommand*{\letterdatestyle}[1]{{\fontsize{\@letterdatesize}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\lettertextstyle}{\fontsize{\@lettertextsize}{1.4em}\bodyfontlight\upshape\color{graytext}}
+\newcommand*{\letternamestyle}[1]{{\fontsize{\@letternamesize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\letterenclosurestyle}[1]{{\fontsize{\@letterenclosuresize}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
 
 
 %-------------------------------------------------------------------------------
