@@ -88,6 +88,8 @@
   pdfsubject={},
   pdfkeywords={}
 }
+% Needed for key-value commands
+\RequirePackage{keyval}
 
 
 %-------------------------------------------------------------------------------
@@ -242,21 +244,17 @@
 %                Commands for personal information
 %-------------------------------------------------------------------------------
 % Define photo ID
-% Usage: \photo[circle|rectangle,edge|noedge,left|right]{<path-to-image>}
-\newcommand{\photo}[2][circle,edge,left]{%
-  \def\@photo{#2}
-  \@for\tmp:=#1\do{%
-    \ifthenelse{\equal{\tmp}{circle} \or \equal{\tmp}{rectangle}}%
-      {\let\@photoshape\tmp}{}%
-    \ifthenelse{\equal{\tmp}{edge} \or \equal{\tmp}{noedge}}%
-      {\let\@photoedge\tmp}{}%
-    \ifthenelse{\equal{\tmp}{left} \or \equal{\tmp}{right}}%
-      {\let\@photoalign\tmp}{}%
-  }%
-}
-\def\@photoshape{circle}
-\def\@photoedge{edge}
-\def\@photoalign{left}
+% Usage: \photo[shape=circle|rectangle,edge=none|color,align=left|right,width=1cm,height=1cm]{<path-to-image>}
+\newlength{\@photowidth}
+\newlength{\@photoheight}
+\define@key{photo}{shape}{\def\@photoshape{#1}}
+\define@key{photo}{edge}{\def\@photoedge{#1}}
+\define@key{photo}{align}{\def\@photoalign{#1}}
+\define@key{photo}{width}{\setlength\@photowidth{#1}}
+\define@key{photo}{height}{\def\@photoheight{#1}}
+% Photo defaults
+\setkeys{photo}{shape=circle,edge=darkgray,align=left,width=1cm,height=1cm}
+\newcommand{\photo}[2][]{\setkeys{photo}{#1}\def\@photo{#2}}
 
 % Define writer's name
 % Usage: \name{<firstname>}{<lastname>}
@@ -407,15 +405,8 @@
 \newcommand*{\makecvheader}[1][C]{%
   \newcommand*{\drawphoto}{%
     \ifthenelse{\isundefined{\@photo}}{}{%
-      \newlength{\photodim}
-      \ifthenelse{\equal{\@photoshape}{circle}}%
-        {\setlength{\photodim}{1.3cm}}%
-        {\setlength{\photodim}{1.8cm}}%
-      \ifthenelse{\equal{\@photoedge}{edge}}%
-        {\def\@photoborder{darkgray}}%
-        {\def\@photoborder{none}}%
       \begin{tikzpicture}%
-        \node[\@photoshape, draw=\@photoborder, line width=0.3mm, inner sep=\photodim, fill overzoom image=\@photo] () {};
+        \node[\@photoshape, draw=\@photoedge, line width=0.3mm, inner xsep=\@photowidth, inner ysep=\@photoheight, fill overzoom image=\@photo] () {};
       \end{tikzpicture}
     }%
   }
